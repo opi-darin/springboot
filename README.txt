@@ -1,4 +1,4 @@
-Simple Spring Boot RESTful webservice example using gradle with docker integration.
+Spring Boot RESTful webservice example using gradle with docker integration.
 
 Basic customer webservice (id, first and last name only) using hard coded data, with GET/POST/PUT/DELETE implementations.
 
