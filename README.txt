@@ -4,35 +4,34 @@ Basic customer webservice (id, first and last name only) using hard coded data, 
 
 Requirements:
 
-Java 8+, Gradle, Docker, curl or Chrome Postman
+Java 8+, Docker, curl or Chrome Postman
 
-Build:
+Run using Gradle
 
-Run the gradle build to compile, test, and assemble the code into a JAR file.
+1. ./gradlew bootRun
+2. Test web service using curl or brower extension like Chrome Postman
 
-gradle build
+   Examples:
+       curl localhost:8080/customers
+       curl localhost:8080/customers/1
 
-Run the application
+Run using Docker
 
-java -jar build/libs/example-springboot-1.0.0.jar
+1. Build a Docker image
 
-Or
+./gradlew build buildDocker
 
-Build a Docker image
+2. Run the Docker container
 
-gradle build buildDocker
-
-Run the Docker container
 docker run -p 8080:8080 -t example-springboot
 
-Usage:
+3. Test web service using curl or brower extension like Chrome Postman
 
-Use a tool like curl or Chrome Postman to try it out!
+   Examples:
+       curl localhost:8080/customers
+       curl localhost:8080/customers/1
 
-Examples:
 
-curl localhost:8080/customers
-curl localhost:8080/customers/1
 
 Next steps that could be included in the example:
 - real data store
